@@ -37,7 +37,7 @@ jobs:
           REPO: basic-web-ec2
           IMAGE_TAG: ${{ github.sha }}
         run: |
-          docker build -t $REGISTRY/$REPO:$IMAGE_TAG ./app
+          docker build -t $REGISTRY/$REPO:$IMAGE_TAG ./Script
           docker push -q $REGISTRY/$REPO:$IMAGE_TAG
           echo "IMAGE_URI=$REGISTRY/$REPO:$IMAGE_TAG" >> $GITHUB_ENV
 
